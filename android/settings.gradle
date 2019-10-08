@@ -1,2 +1,2 @@
-include ':capacitor-android', ':credoappsdk'
+include ':capacitor-android', ':credoappsdk', ':fraudforce'
 project(':capacitor-android').projectDir = new File('../node_modules/@capacitor/android/capacitor')
