@@ -2,4 +2,4 @@ include ':capacitor-android'
 project(':capacitor-android').projectDir = new File('../node_modules/@capacitor/android/capacitor')
 
 include ':credoappsdk'
-project(':credoappsdk').projectDir = new File('credoappsdk')
+project(':credoappsdk').projectDir = new File('libs/credoappsdk')
