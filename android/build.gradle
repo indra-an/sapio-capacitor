@@ -38,7 +38,7 @@ repositories {
 
 
 dependencies {
-    implementation fileTree(include: ['*.jar','*.aar'], dir: 'libs')
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation project(':capacitor-android')
     implementation project(':credoappsdk')
     testImplementation 'junit:junit:4.12'
