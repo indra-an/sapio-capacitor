@@ -84,6 +84,7 @@ public class SapioPlugin extends Plugin {
 
         if (requestCode == REQUEST_IMAGE_CAPTURE) {
             // We got the permission
+            init(savedCall);
         }
     }
 }
