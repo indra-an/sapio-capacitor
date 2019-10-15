@@ -34,10 +34,10 @@ public class SapioPlugin extends Plugin {
 
     @PluginMethod()
     public void init(PluginCall call) {
-        if (!hasRequiredPermissions()) {
-            saveCall(call);
-            pluginRequestAllPermissions();
-        } else {
+//        if (!hasRequiredPermissions()) {
+//            saveCall(call);
+//            pluginRequestAllPermissions();
+//        } else {
             try {
                 Context context = getContext();
                 String authKey = call.getString("authKey");
@@ -61,7 +61,7 @@ public class SapioPlugin extends Plugin {
                 err.put("errorMessage", message);
                 call.error(err.toString());
             }
-        }
+//        }
     }
 
     @Override
