@@ -17,27 +17,41 @@ import credoapp.CredoAppException;
 import credoapp.ErrorType;
 
 @NativePlugin(
-    permissions={
-        Manifest.permission.INTERNET,
-        Manifest.permission.READ_EXTERNAL_STORAGE,
-        Manifest.permission.READ_CONTACTS,
-        Manifest.permission.READ_CALENDAR,
-        Manifest.permission.GET_ACCOUNTS,
-        Manifest.permission.READ_PHONE_STATE,
-        Manifest.permission.BLUETOOTH,
-        Manifest.permission.ACCESS_WIFI_STATE,
-        Manifest.permission.PACKAGE_USAGE_STATS
-    }
+//    permissions={
+//        Manifest.permission.INTERNET,
+//        Manifest.permission.READ_EXTERNAL_STORAGE,
+//        Manifest.permission.READ_CONTACTS,
+//        Manifest.permission.READ_CALENDAR,
+//        Manifest.permission.GET_ACCOUNTS,
+//        Manifest.permission.READ_PHONE_STATE,
+//        Manifest.permission.BLUETOOTH,
+//        Manifest.permission.ACCESS_WIFI_STATE,
+//        Manifest.permission.PACKAGE_USAGE_STATS
+//    }
 )
+
 public class SapioPlugin extends Plugin {
     static final int REQUEST_IMAGE_CAPTURE = PluginRequestCodes.CAMERA_IMAGE_CAPTURE;
 
     @PluginMethod()
+
     public void init(PluginCall call) {
-//        if (!hasRequiredPermissions()) {
-//            saveCall(call);
+        if (!hasRequiredPermissions()) {
+            saveCall(call);
 //            pluginRequestAllPermissions();
-//        } else {
+
+            pluginRequestPermissions(new String[] {
+                    Manifest.permission.INTERNET,
+                    Manifest.permission.READ_EXTERNAL_STORAGE,
+                    Manifest.permission.READ_CONTACTS,
+                    Manifest.permission.READ_CALENDAR,
+                    Manifest.permission.GET_ACCOUNTS,
+                    Manifest.permission.READ_PHONE_STATE,
+                    Manifest.permission.BLUETOOTH,
+                    Manifest.permission.ACCESS_WIFI_STATE,
+                    Manifest.permission.PACKAGE_USAGE_STATS
+            }, REQUEST_IMAGE_CAPTURE);
+        } else {
             try {
                 Context context = getContext();
                 String authKey = call.getString("authKey");
@@ -46,11 +60,13 @@ public class SapioPlugin extends Plugin {
 
                 CredoAppService credoAppService = new CredoAppService(context, url, authKey);
 
-                credoAppService.collectData(recordNumber);
+                String res = credoAppService.collectData(recordNumber);
 
                 JSObject ret = new JSObject();
+                ret.put("result", res);
                 ret.put("message", "Success record " + recordNumber);
                 call.success(ret);
+
             }
             catch (CredoAppException e){
                 ErrorType errorType = e.getType();
@@ -61,7 +77,7 @@ public class SapioPlugin extends Plugin {
                 err.put("errorMessage", message);
                 call.error(err.toString());
             }
-//        }
+        }
     }
 
     @Override
