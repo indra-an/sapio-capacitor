@@ -73,16 +73,19 @@ public class SapioPlugin extends Plugin {
             // Check data usage statistics permission. In order to access Application and Network usage statistics, the user should manually grant 'Usage Stats' permission
             if (ungrantedPermissions.contains("android.permission.PACKAGE_USAGE_STATS")) {
                 startActivityForResult(getSavedCall(), new Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS), 0);
+                init(call);
             } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && !ungrantedPermissions.isEmpty()) {
                 pluginRequestPermissions(ungrantedPermissions.toArray(new String[ungrantedPermissions.size()]), REQUEST_IMAGE_CAPTURE);
+                init(call);
+            }else{
+
+                final String res = credoAppService.collectData(recordNumber);
+
+                JSObject ret = new JSObject();
+                ret.put("result", res);
+                ret.put("message", "Success record " + recordNumber);
+                call.success(ret);
             }
-
-            final String res = credoAppService.collectData(recordNumber);
-
-            JSObject ret = new JSObject();
-            ret.put("result", res);
-            ret.put("message", "Success record " + recordNumber);
-            call.success(ret);
 
         }
         catch (CredoAppException e){

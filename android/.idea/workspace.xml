@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33f74df5-dbbb-4e87-b4e4-9445e7825f45" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/id/codify/sapio/SapioPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/id/codify/sapio/SapioPlugin.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,8 +40,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/id/codify/sapio/SapioPlugin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="848">
-              <caret line="76" column="40" selection-start-line="76" selection-start-column="40" selection-end-line="76" selection-end-column="40" />
+            <state relative-caret-position="169">
+              <caret line="77" column="40" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -114,6 +113,7 @@
       <find>ignore</find>
       <find>ischecked</find>
       <find>ungrantedPermissions</find>
+      <find>REQUEST_IMAGE_CAPTURE</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -331,8 +331,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/id/codify/sapio/SapioPlugin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="848">
-          <caret line="76" column="40" selection-start-line="76" selection-start-column="40" selection-end-line="76" selection-end-column="40" />
+        <state relative-caret-position="169">
+          <caret line="77" column="40" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
