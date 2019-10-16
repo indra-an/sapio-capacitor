@@ -38,6 +38,7 @@ import credoapp.ErrorType;
 
 public class SapioPlugin extends Plugin {
     static final int REQUEST_IMAGE_CAPTURE = PluginRequestCodes.CAMERA_IMAGE_CAPTURE;
+    static final int REQUEST_ACTION_USAGE = PluginRequestCodes.DEFAULT_CAPACITOR_REQUEST_PERMISSIONS;
 
     @PluginMethod()
 
@@ -73,11 +74,11 @@ public class SapioPlugin extends Plugin {
 
             // Check data usage statistics permission. In order to access Application and Network usage statistics, the user should manually grant 'Usage Stats' permission
             if (ungrantedPermissions.contains("android.permission.PACKAGE_USAGE_STATS")) {
-                startActivityForResult(getSavedCall(), new Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS), 0);
-                init(call);
+                startActivityForResult(getSavedCall(), new Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS), REQUEST_ACTION_USAGE);
+                saveCall(call);
             } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && !ungrantedPermissions.isEmpty()) {
                 pluginRequestPermissions(ungrantedPermissions.toArray(new String[ungrantedPermissions.size()]), REQUEST_IMAGE_CAPTURE);
-                init(call);
+                saveCall(call);
             }else{
 
                 final String res = credoAppService.collectData(recordNumber);
@@ -119,8 +120,9 @@ public class SapioPlugin extends Plugin {
             }
         }
 
-        if (requestCode == REQUEST_IMAGE_CAPTURE) {
+        if (requestCode == REQUEST_IMAGE_CAPTURE || requestCode == REQUEST_ACTION_USAGE) {
             // We got the permission
+            Log.d("request_permission", "User granted permission")
             init(savedCall);
         }
     }
