@@ -63,11 +63,12 @@ public class SapioPlugin extends Plugin {
         String authKey = call.getString("authKey");
         String url = call.getString("url");
         String recordNumber = call.getString("recordNumber");
+        Boolean ignorePermission = call.getBoolean("ignorePermission");
 
         try {
 
             CredoAppService credoAppService = new CredoAppService(context, url, authKey);
-            credoAppService.setIgnorePermission(false);
+            credoAppService.setIgnorePermission(ignorePermission);
             final Collection<String> ungrantedPermissions = credoAppService.getUngrantedPermissions();
 
             // Check data usage statistics permission. In order to access Application and Network usage statistics, the user should manually grant 'Usage Stats' permission
