@@ -11,8 +11,8 @@ import android.util.Log;
 import com.getcapacitor.JSObject;
 import com.getcapacitor.NativePlugin;
 import com.getcapacitor.Plugin;
-import com.ge tcapacitor.PluginCall;
-import com.ge   tcapacitor.PluginMethod;
+import com.getcapacitor.PluginCall;
+import com.getcapacitor.PluginMethod;
 
 import java.util.Collection;
 
@@ -84,10 +84,9 @@ public class SapioPlugin extends Plugin {
             JSObject err = new JSObject();
             err.put("errorType", errorType);
             err.put("errorMessage", message);
-            err.put("hasSettingPerm", grantedPackageUsage)
+            err.put("hasSettingPerm", grantedSettingPerm);
             call.error(err.toString());
         }
-//        }
     }
 
     @Override
