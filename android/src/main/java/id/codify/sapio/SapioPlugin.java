@@ -11,8 +11,8 @@ import android.util.Log;
 import com.getcapacitor.JSObject;
 import com.getcapacitor.NativePlugin;
 import com.getcapacitor.Plugin;
-import com.getcapacitor.PluginCall;
-import com.getcapacitor.PluginMethod;
+import com.ge tcapacitor.PluginCall;
+import com.ge   tcapacitor.PluginMethod;
 
 import java.util.Collection;
 
@@ -49,13 +49,12 @@ public class SapioPlugin extends Plugin {
         String recordNumber = call.getString("recordNumber");
         Boolean ignoreDeniedPermission = call.getBoolean("ignoreDeniedPermission");
         Boolean requestPackagePermission = call.getBoolean("requestPackagePermission");
-
+        Boolean grantedSettingPerm = call.getBoolean("ignoreDeniedPermission");
         try {
 
             CredoAppService credoAppService = new CredoAppService(context, url, authKey);
             credoAppService.setIgnorePermission(ignoreDeniedPermission);
             final Collection<String> ungrantedPermissions = credoAppService.getUngrantedPermissions();
-            Log.d(getLogTag(), ungrantedPermissions.toArray(new String[ungrantedPermissions.size()]).toString());
 
             if (!ignoreDeniedPermission) {
                 // Check data usage statistics permission. In order to access Application and Network usage statistics, the user should manually grant 'Usage Stats' permission
@@ -66,6 +65,8 @@ public class SapioPlugin extends Plugin {
                     saveCall(call);
                     pluginRequestPermissions(ungrantedPermissions.toArray(new String[ungrantedPermissions.size()]), REQUEST_CAPACITOR_CODE);
                 }
+
+                grantedSettingPerm = ungrantedPermissions.contains("android.permission.PACKAGE_USAGE_STATS");
             }
 
             final String rn = credoAppService.collectData(recordNumber);
@@ -83,6 +84,7 @@ public class SapioPlugin extends Plugin {
             JSObject err = new JSObject();
             err.put("errorType", errorType);
             err.put("errorMessage", message);
+            err.put("grantedSettingPerm", grantedPackageUsage)
             call.error(err.toString());
         }
 //        }
