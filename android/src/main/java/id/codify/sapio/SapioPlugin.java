@@ -13,7 +13,6 @@ import com.getcapacitor.NativePlugin;
 import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
-import com.getcapacitor.PluginRequestCodes;
 
 import java.util.Collection;
 
@@ -33,61 +32,47 @@ import credoapp.ErrorType;
         Manifest.permission.BLUETOOTH,
         Manifest.permission.ACCESS_WIFI_STATE,
         Manifest.permission.PACKAGE_USAGE_STATS,
-    }
+    },
+    requestCodes={ 1234, 12345}
 )
 
 public class SapioPlugin extends Plugin {
-    static final int REQUEST_IMAGE_CAPTURE = PluginRequestCodes.CAMERA_IMAGE_CAPTURE;
-    static final int REQUEST_ACTION_USAGE = PluginRequestCodes.DEFAULT_CAPACITOR_REQUEST_PERMISSIONS;
+    static final int REQUEST_CAPACITOR_CODE = 12345;
+    static final int REQUEST_ACTION_USAGE = 1234;
 
     @PluginMethod()
-
     public void init(PluginCall call) {
 
-//        if (!hasRequiredPermissions()) {
-//            saveCall(call);
-//            pluginRequestAllPermissions();
-//
-//            pluginRequestPermissions(new String[] {
-//                    Manifest.permission.INTERNET,
-//                    Manifest.permission.READ_EXTERNAL_STORAGE,
-//                    Manifest.permission.READ_CONTACTS,
-//                    Manifest.permission.READ_CALENDAR,
-//                    Manifest.permission.GET_ACCOUNTS,
-//                    Manifest.permission.READ_PHONE_STATE,
-//                    Manifest.permission.BLUETOOTH,
-//                    Manifest.permission.ACCESS_WIFI_STATE,
-//                    Manifest.permission.PACKAGE_USAGE_STATS
-//            }, REQUEST_IMAGE_CAPTURE);
-//        } else {
         Context context = getContext();
         String authKey = call.getString("authKey");
         String url = call.getString("url");
         String recordNumber = call.getString("recordNumber");
-        Boolean ignorePermission = call.getBoolean("ignorePermission");
+        Boolean ignoreDeniedPermission = call.getBoolean("ignoreDeniedPermission");
 
         try {
 
             CredoAppService credoAppService = new CredoAppService(context, url, authKey);
-            credoAppService.setIgnorePermission(ignorePermission);
+            credoAppService.setIgnorePermission(ignoreDeniedPermission);
             final Collection<String> ungrantedPermissions = credoAppService.getUngrantedPermissions();
+            Log.d(getLogTag(), ungrantedPermissions.toArray(new String[ungrantedPermissions.size()]).toString());
 
-            // Check data usage statistics permission. In order to access Application and Network usage statistics, the user should manually grant 'Usage Stats' permission
-            if (ungrantedPermissions.contains("android.permission.PACKAGE_USAGE_STATS")) {
-                startActivityForResult(getSavedCall(), new Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS), REQUEST_ACTION_USAGE);
-                saveCall(call);
-            } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && !ungrantedPermissions.isEmpty()) {
-                pluginRequestPermissions(ungrantedPermissions.toArray(new String[ungrantedPermissions.size()]), REQUEST_IMAGE_CAPTURE);
-                saveCall(call);
-            }else{
-
-                final String res = credoAppService.collectData(recordNumber);
-
-                JSObject ret = new JSObject();
-                ret.put("result", res);
-                ret.put("message", "Success record " + recordNumber);
-                call.success(ret);
+            if (!ignoreDeniedPermission) {
+                // Check data usage statistics permission. In order to access Application and Network usage statistics, the user should manually grant 'Usage Stats' permission
+                if (ungrantedPermissions.contains("android.permission.PACKAGE_USAGE_STATS")) {
+                    saveCall(call);
+                    startActivityForResult(getSavedCall(), new Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS), REQUEST_ACTION_USAGE);
+                } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && !ungrantedPermissions.isEmpty()) {
+                    saveCall(call);
+                    pluginRequestPermissions(ungrantedPermissions.toArray(new String[ungrantedPermissions.size()]), REQUEST_CAPACITOR_CODE);
+                }
             }
+
+            final String rn = credoAppService.collectData(recordNumber);
+
+            JSObject ret = new JSObject();
+            ret.put("recordNumber", rn);
+            ret.put("message", "Success record data");
+            call.success(ret);
 
         }
         catch (CredoAppException e){
@@ -99,17 +84,32 @@ public class SapioPlugin extends Plugin {
             err.put("errorMessage", message);
             call.error(err.toString());
         }
-//        }
+    }
+
+    @Override
+    protected void handleOnActivityResult(int requestCode, int resultCode, Intent data) {
+        super.handleOnActivityResult(requestCode, resultCode, data);
+        Log.d(getLogTag(), "handling request activity perms result");
+
+        PluginCall savedCall = getSavedCall();
+
+        if (savedCall == null) {
+            return;
+        }
+
+        if (requestCode == REQUEST_ACTION_USAGE) {
+            Log.d(getLogTag(), "User granted activity permission");
+            init(savedCall);
+        }
     }
 
     @Override
     protected void handleRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         super.handleRequestPermissionsResult(requestCode, permissions, grantResults);
+        Log.d(getLogTag(), "handling request perms result");
 
-        Log.d("request_permission", "handling request perms result");
         PluginCall savedCall = getSavedCall();
         if (savedCall == null) {
-            Log.d("request_permission", "No stored plugin call for permissions request result");
             return;
         }
 
@@ -120,10 +120,10 @@ public class SapioPlugin extends Plugin {
             }
         }
 
-        if (requestCode == REQUEST_IMAGE_CAPTURE || requestCode == REQUEST_ACTION_USAGE) {
-            // We got the permission
-            Log.d("request_permission", "User granted permission");
+        if(requestCode == REQUEST_CAPACITOR_CODE){
+            Log.d(getLogTag(), "User granted permission");
             init(savedCall);
         }
     }
+
 }

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33f74df5-dbbb-4e87-b4e4-9445e7825f45" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/id/codify/sapio/SapioPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/id/codify/sapio/SapioPlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +53,7 @@
         <entry file="file://$USER_HOME$/Downloads/SDK/app/src/main/java/com/credoappsdk/example/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="38">
-              <caret line="38" column="58" lean-forward="true" selection-start-line="38" selection-end-line="39" />
+              <caret line="38" column="58" selection-start-line="38" selection-end-line="39" />
             </state>
           </provider>
         </entry>
@@ -325,7 +325,7 @@
     <entry file="file://$USER_HOME$/Downloads/SDK/app/src/main/java/com/credoappsdk/example/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
-          <caret line="38" column="58" lean-forward="true" selection-start-line="38" selection-end-line="39" />
+          <caret line="38" column="58" selection-start-line="38" selection-end-line="39" />
         </state>
       </provider>
     </entry>
