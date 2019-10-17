@@ -122,7 +122,7 @@ public class SapioPlugin extends Plugin {
 
         if (requestCode == REQUEST_IMAGE_CAPTURE || requestCode == REQUEST_ACTION_USAGE) {
             // We got the permission
-            Log.d("request_permission", "User granted permission")
+            Log.d("request_permission", "User granted permission");
             init(savedCall);
         }
     }
