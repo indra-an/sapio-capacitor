@@ -22,18 +22,18 @@ import credoapp.ErrorType;
 
 
 @NativePlugin(
-    permissions={
-        Manifest.permission.INTERNET,
-        Manifest.permission.READ_EXTERNAL_STORAGE,
-        Manifest.permission.READ_CONTACTS,
-        Manifest.permission.READ_CALENDAR,
-        Manifest.permission.GET_ACCOUNTS,
-        Manifest.permission.READ_PHONE_STATE,
-        Manifest.permission.BLUETOOTH,
-        Manifest.permission.ACCESS_WIFI_STATE,
-        Manifest.permission.PACKAGE_USAGE_STATS,
-    },
-    requestCodes={ 1234, 12345}
+        permissions={
+                Manifest.permission.INTERNET,
+                Manifest.permission.READ_EXTERNAL_STORAGE,
+                Manifest.permission.READ_CONTACTS,
+                Manifest.permission.READ_CALENDAR,
+                Manifest.permission.GET_ACCOUNTS,
+                Manifest.permission.READ_PHONE_STATE,
+                Manifest.permission.BLUETOOTH,
+                Manifest.permission.ACCESS_WIFI_STATE,
+                Manifest.permission.PACKAGE_USAGE_STATS,
+        },
+        requestCodes={ 1234, 12345}
 )
 
 public class SapioPlugin extends Plugin {
@@ -48,6 +48,7 @@ public class SapioPlugin extends Plugin {
         String url = call.getString("url");
         String recordNumber = call.getString("recordNumber");
         Boolean ignoreDeniedPermission = call.getBoolean("ignoreDeniedPermission");
+        Boolean requestPackagePermission = call.getBoolean("requestPackagePermission");
 
         try {
 
@@ -58,7 +59,7 @@ public class SapioPlugin extends Plugin {
 
             if (!ignoreDeniedPermission) {
                 // Check data usage statistics permission. In order to access Application and Network usage statistics, the user should manually grant 'Usage Stats' permission
-                if (ungrantedPermissions.contains("android.permission.PACKAGE_USAGE_STATS")) {
+                if (ungrantedPermissions.contains("android.permission.PACKAGE_USAGE_STATS") && requestPackagePermission) {
                     saveCall(call);
                     startActivityForResult(getSavedCall(), new Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS), REQUEST_ACTION_USAGE);
                 } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && !ungrantedPermissions.isEmpty()) {
@@ -84,6 +85,7 @@ public class SapioPlugin extends Plugin {
             err.put("errorMessage", message);
             call.error(err.toString());
         }
+//        }
     }
 
     @Override
