@@ -84,7 +84,7 @@ public class SapioPlugin extends Plugin {
             JSObject err = new JSObject();
             err.put("errorType", errorType);
             err.put("errorMessage", message);
-            err.put("grantedSettingPerm", grantedPackageUsage)
+            err.put("hasSettingPerm", grantedPackageUsage)
             call.error(err.toString());
         }
 //        }
@@ -103,7 +103,10 @@ public class SapioPlugin extends Plugin {
 
         if (requestCode == REQUEST_ACTION_USAGE) {
             Log.d(getLogTag(), "User granted activity permission");
-            init(savedCall);
+
+            JSObject res = new JSObject();
+            res.put("grantedSettingPerm", true);
+            savedCall.success(res);
         }
     }
 
@@ -126,7 +129,10 @@ public class SapioPlugin extends Plugin {
 
         if(requestCode == REQUEST_CAPACITOR_CODE){
             Log.d(getLogTag(), "User granted permission");
-            init(savedCall);
+
+            JSObject res = new JSObject();
+            res.put("grantedPerm", true);
+            savedCall.success(res);
         }
     }
 
