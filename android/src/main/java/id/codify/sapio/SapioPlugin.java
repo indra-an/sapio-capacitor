@@ -39,6 +39,7 @@ import credoapp.ErrorType;
 public class SapioPlugin extends Plugin {
     static final int REQUEST_CAPACITOR_CODE = 12345;
     static final int REQUEST_ACTION_USAGE = 1234;
+    boolean grantedSettingPerm = false;
 
     @PluginMethod()
     public void init(PluginCall call) {
@@ -49,7 +50,7 @@ public class SapioPlugin extends Plugin {
         String recordNumber = call.getString("recordNumber");
         Boolean ignoreDeniedPermission = call.getBoolean("ignoreDeniedPermission");
         Boolean requestPackagePermission = call.getBoolean("requestPackagePermission");
-        Boolean grantedSettingPerm = call.getBoolean("ignoreDeniedPermission");
+        grantedSettingPerm = call.getBoolean("ignoreDeniedPermission");
         try {
 
             CredoAppService credoAppService = new CredoAppService(context, url, authKey);
@@ -121,7 +122,11 @@ public class SapioPlugin extends Plugin {
 
         for(int result : grantResults) {
             if (result == PackageManager.PERMISSION_DENIED) {
-                savedCall.error("User denied permission");
+                JSObject err = new JSObject();
+                err.put("errorType", "UngrantedPermissions");
+                err.put("errorMessage", "User denied permission");
+                err.put("hasSettingPerm", grantedSettingPerm);
+                savedCall.error(err.toString());
                 return;
             }
         }
