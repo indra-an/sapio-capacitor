@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: __local_aars__:/Users/codify-dra/Workspaces/plugin/sapio-capacitor/android/fraudforce/fraudforce-3.1.0.aar:unspecified@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/fraudforce-3.1.0.aar/afcc937e3111eed4a84e800b8e03b6d6/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/fraudforce-3.1.0.aar/afcc937e3111eed4a84e800b8e03b6d6/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

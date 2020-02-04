@@ -1,2 +1,0 @@
-configurations.maybeCreate("default")
-artifacts.add("default", file('fraudforce-3.1.0.aar'))
