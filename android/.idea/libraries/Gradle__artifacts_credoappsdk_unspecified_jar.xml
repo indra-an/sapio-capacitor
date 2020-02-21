@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: artifacts:credoappsdk:unspecified@jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/credoappsdk/build/.transforms/9386de0b115558d6bcfebc737216d0e7/credoappsdk/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/credoappsdk/build/.transforms/9386de0b115558d6bcfebc737216d0e7/credoappsdk/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

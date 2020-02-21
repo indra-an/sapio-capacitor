@@ -1,0 +1,182 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="id.codify.sapio.sapiocapacitor.test" >
+4
+5    <uses-sdk
+5-->/Users/codify-dra/Workspaces/plugin/sapio-capacitor/android/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger3849064018234950673.xml:5:5-74
+6        android:minSdkVersion="21"
+6-->/Users/codify-dra/Workspaces/plugin/sapio-capacitor/android/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger3849064018234950673.xml:5:15-41
+7        android:targetSdkVersion="28" />
+7-->/Users/codify-dra/Workspaces/plugin/sapio-capacitor/android/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger3849064018234950673.xml:5:42-71
+8
+9    <instrumentation
+9-->/Users/codify-dra/Workspaces/plugin/sapio-capacitor/android/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger3849064018234950673.xml:11:5-15:85
+10        android:name="android.support.test.runner.AndroidJUnitRunner"
+10-->/Users/codify-dra/Workspaces/plugin/sapio-capacitor/android/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger3849064018234950673.xml:11:22-83
+11        android:functionalTest="false"
+11-->/Users/codify-dra/Workspaces/plugin/sapio-capacitor/android/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger3849064018234950673.xml:14:22-52
+12        android:handleProfiling="false"
+12-->/Users/codify-dra/Workspaces/plugin/sapio-capacitor/android/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger3849064018234950673.xml:13:22-53
+13        android:label="Tests for id.codify.sapio.sapiocapacitor.test"
+13-->/Users/codify-dra/Workspaces/plugin/sapio-capacitor/android/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger3849064018234950673.xml:15:22-83
+14        android:targetPackage="id.codify.sapio.sapiocapacitor.test" />
+14-->/Users/codify-dra/Workspaces/plugin/sapio-capacitor/android/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger3849064018234950673.xml:12:22-81
+15
+16    <uses-feature
+16-->[:capacitor-android] /Users/codify-dra/Workspaces/plugin/sapio-capacitor/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-13:36
+17        android:name="android.hardware.camera"
+17-->[:capacitor-android] /Users/codify-dra/Workspaces/plugin/sapio-capacitor/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-47
+18        android:required="false" /> <!-- Include required permissions for Google Mobile Ads to run -->
+18-->[:capacitor-android] /Users/codify-dra/Workspaces/plugin/sapio-capacitor/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:9-33
+19    <uses-permission android:name="android.permission.INTERNET" />
+19-->[com.google.android.gms:play-services-ads-lite:15.0.1] /Users/codify-dra/.gradle/caches/transforms-2/files-2.1/3ce3ae255b2c1cbbd569c580334f5e4b/play-services-ads-lite-15.0.1/AndroidManifest.xml:23:5-67
+19-->[com.google.android.gms:play-services-ads-lite:15.0.1] /Users/codify-dra/.gradle/caches/transforms-2/files-2.1/3ce3ae255b2c1cbbd569c580334f5e4b/play-services-ads-lite-15.0.1/AndroidManifest.xml:23:22-64
+20    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+20-->[com.google.android.gms:play-services-ads-lite:15.0.1] /Users/codify-dra/.gradle/caches/transforms-2/files-2.1/3ce3ae255b2c1cbbd569c580334f5e4b/play-services-ads-lite-15.0.1/AndroidManifest.xml:24:5-79
+20-->[com.google.android.gms:play-services-ads-lite:15.0.1] /Users/codify-dra/.gradle/caches/transforms-2/files-2.1/3ce3ae255b2c1cbbd569c580334f5e4b/play-services-ads-lite-15.0.1/AndroidManifest.xml:24:22-76
+21    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+21-->[com.google.firebase:firebase-iid:18.0.0] /Users/codify-dra/.gradle/caches/transforms-2/files-2.1/46cde175a92fa5eed3f77e8920785908/firebase-iid-18.0.0/AndroidManifest.xml:24:5-68
+21-->[com.google.firebase:firebase-iid:18.0.0] /Users/codify-dra/.gradle/caches/transforms-2/files-2.1/46cde175a92fa5eed3f77e8920785908/firebase-iid-18.0.0/AndroidManifest.xml:24:22-65
+22    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+22-->[com.google.firebase:firebase-iid:18.0.0] /Users/codify-dra/.gradle/caches/transforms-2/files-2.1/46cde175a92fa5eed3f77e8920785908/firebase-iid-18.0.0/AndroidManifest.xml:26:5-82
+22-->[com.google.firebase:firebase-iid:18.0.0] /Users/codify-dra/.gradle/caches/transforms-2/files-2.1/46cde175a92fa5eed3f77e8920785908/firebase-iid-18.0.0/AndroidManifest.xml:26:22-79
+23
+24    <application
+24-->/Users/codify-dra/Workspaces/plugin/sapio-capacitor/android/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger3849064018234950673.xml:7:5-9:19
+25        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
+25-->[com.android.support:support-compat:28.0.0] /Users/codify-dra/.gradle/caches/transforms-2/files-2.1/dd1cf78f22bdd94f550130b281f27c97/support-compat-28.0.0/AndroidManifest.xml:22:18-91
+26        android:debuggable="true"
+26-->/Users/codify-dra/Workspaces/plugin/sapio-capacitor/android/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger3849064018234950673.xml:7:18-43
+27        android:largeHeap="true" >
+27-->[:credoappsdk] /Users/codify-dra/Workspaces/plugin/sapio-capacitor/android/credoappsdk/build/.transforms/9386de0b115558d6bcfebc737216d0e7/credoappsdk/AndroidManifest.xml:11:18-42
+28        <uses-library android:name="android.test.runner" />
+28-->/Users/codify-dra/Workspaces/plugin/sapio-capacitor/android/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger3849064018234950673.xml:8:9-60
+28-->/Users/codify-dra/Workspaces/plugin/sapio-capacitor/android/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger3849064018234950673.xml:8:23-57
+29
+30        <service
+30-->[:capacitor-android] /Users/codify-dra/Workspaces/plugin/sapio-capacitor/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:9-18:40
+31            android:name="com.getcapacitor.plugin.background.BackgroundTaskService"
+31-->[:capacitor-android] /Users/codify-dra/Workspaces/plugin/sapio-capacitor/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-84
+32            android:exported="false" />
+32-->[:capacitor-android] /Users/codify-dra/Workspaces/plugin/sapio-capacitor/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:13-37
+33
+34        <receiver android:name="com.getcapacitor.plugin.notification.TimedNotificationPublisher" />
+34-->[:capacitor-android] /Users/codify-dra/Workspaces/plugin/sapio-capacitor/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:20:9-100
+34-->[:capacitor-android] /Users/codify-dra/Workspaces/plugin/sapio-capacitor/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:20:19-97
+35        <receiver android:name="com.getcapacitor.plugin.notification.NotificationDismissReceiver" />
+35-->[:capacitor-android] /Users/codify-dra/Workspaces/plugin/sapio-capacitor/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:21:9-101
+35-->[:capacitor-android] /Users/codify-dra/Workspaces/plugin/sapio-capacitor/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:21:19-98
+36
+37        <meta-data
+37-->[:capacitor-android] /Users/codify-dra/Workspaces/plugin/sapio-capacitor/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:23:9-25:37
+38            android:name="firebase_messaging_auto_init_enabled"
+38-->[:capacitor-android] /Users/codify-dra/Workspaces/plugin/sapio-capacitor/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:24:13-64
+39            android:value="false" />
+39-->[:capacitor-android] /Users/codify-dra/Workspaces/plugin/sapio-capacitor/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:25:13-34
+40
+41        <service
+41-->[:capacitor-android] /Users/codify-dra/Workspaces/plugin/sapio-capacitor/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:27:9-33:19
+42            android:name="com.getcapacitor.CapacitorFirebaseMessagingService"
+42-->[:capacitor-android] /Users/codify-dra/Workspaces/plugin/sapio-capacitor/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:28:13-78
+43            android:stopWithTask="false" >
+43-->[:capacitor-android] /Users/codify-dra/Workspaces/plugin/sapio-capacitor/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:29:13-41
+44            <intent-filter>
+44-->[:capacitor-android] /Users/codify-dra/Workspaces/plugin/sapio-capacitor/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:30:13-32:29
+45                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+45-->[:capacitor-android] /Users/codify-dra/Workspaces/plugin/sapio-capacitor/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:31:17-78
+45-->[:capacitor-android] /Users/codify-dra/Workspaces/plugin/sapio-capacitor/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:31:25-75
+46            </intent-filter>
+47        </service>
+48        <!--
+49             FirebaseMessagingService performs security checks at runtime,
+50             but set to not exported to explicitly avoid allowing another app to call it.
+51        -->
+52        <service
+52-->[com.google.firebase:firebase-messaging:18.0.0] /Users/codify-dra/.gradle/caches/transforms-2/files-2.1/b4a34b60aecc28933f7018c6baece69b/firebase-messaging-18.0.0/AndroidManifest.xml:28:9-34:19
+53            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+53-->[com.google.firebase:firebase-messaging:18.0.0] /Users/codify-dra/.gradle/caches/transforms-2/files-2.1/b4a34b60aecc28933f7018c6baece69b/firebase-messaging-18.0.0/AndroidManifest.xml:29:13-82
+54            android:exported="false" >
+54-->[com.google.firebase:firebase-messaging:18.0.0] /Users/codify-dra/.gradle/caches/transforms-2/files-2.1/b4a34b60aecc28933f7018c6baece69b/firebase-messaging-18.0.0/AndroidManifest.xml:30:13-37
+55            <intent-filter android:priority="-500" >
+55-->[:capacitor-android] /Users/codify-dra/Workspaces/plugin/sapio-capacitor/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:30:13-32:29
+56                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+56-->[:capacitor-android] /Users/codify-dra/Workspaces/plugin/sapio-capacitor/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:31:17-78
+56-->[:capacitor-android] /Users/codify-dra/Workspaces/plugin/sapio-capacitor/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:31:25-75
+57            </intent-filter>
+58        </service> <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
+59        <activity
+59-->[com.google.android.gms:play-services-ads-lite:15.0.1] /Users/codify-dra/.gradle/caches/transforms-2/files-2.1/3ce3ae255b2c1cbbd569c580334f5e4b/play-services-ads-lite-15.0.1/AndroidManifest.xml:29:9-33:64
+60            android:name="com.google.android.gms.ads.AdActivity"
+60-->[com.google.android.gms:play-services-ads-lite:15.0.1] /Users/codify-dra/.gradle/caches/transforms-2/files-2.1/3ce3ae255b2c1cbbd569c580334f5e4b/play-services-ads-lite-15.0.1/AndroidManifest.xml:30:13-65
+61            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+61-->[com.google.android.gms:play-services-ads-lite:15.0.1] /Users/codify-dra/.gradle/caches/transforms-2/files-2.1/3ce3ae255b2c1cbbd569c580334f5e4b/play-services-ads-lite-15.0.1/AndroidManifest.xml:31:13-122
+62            android:exported="false"
+62-->[com.google.android.gms:play-services-ads-lite:15.0.1] /Users/codify-dra/.gradle/caches/transforms-2/files-2.1/3ce3ae255b2c1cbbd569c580334f5e4b/play-services-ads-lite-15.0.1/AndroidManifest.xml:32:13-37
+63            android:theme="@android:style/Theme.Translucent" />
+63-->[com.google.android.gms:play-services-ads-lite:15.0.1] /Users/codify-dra/.gradle/caches/transforms-2/files-2.1/3ce3ae255b2c1cbbd569c580334f5e4b/play-services-ads-lite-15.0.1/AndroidManifest.xml:33:13-61
+64
+65        <service
+65-->[com.google.firebase:firebase-iid:18.0.0] /Users/codify-dra/.gradle/caches/transforms-2/files-2.1/46cde175a92fa5eed3f77e8920785908/firebase-iid-18.0.0/AndroidManifest.xml:29:9-35:19
+66            android:name="com.google.firebase.components.ComponentDiscoveryService"
+66-->[com.google.firebase:firebase-iid:18.0.0] /Users/codify-dra/.gradle/caches/transforms-2/files-2.1/46cde175a92fa5eed3f77e8920785908/firebase-iid-18.0.0/AndroidManifest.xml:30:13-84
+67            android:exported="false" >
+67-->[com.google.firebase:firebase-iid:18.0.0] /Users/codify-dra/.gradle/caches/transforms-2/files-2.1/46cde175a92fa5eed3f77e8920785908/firebase-iid-18.0.0/AndroidManifest.xml:31:13-37
+68            <meta-data
+68-->[com.google.firebase:firebase-iid:18.0.0] /Users/codify-dra/.gradle/caches/transforms-2/files-2.1/46cde175a92fa5eed3f77e8920785908/firebase-iid-18.0.0/AndroidManifest.xml:32:13-34:85
+69                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+69-->[com.google.firebase:firebase-iid:18.0.0] /Users/codify-dra/.gradle/caches/transforms-2/files-2.1/46cde175a92fa5eed3f77e8920785908/firebase-iid-18.0.0/AndroidManifest.xml:33:17-96
+70                android:value="com.google.firebase.components.ComponentRegistrar" />
+70-->[com.google.firebase:firebase-iid:18.0.0] /Users/codify-dra/.gradle/caches/transforms-2/files-2.1/46cde175a92fa5eed3f77e8920785908/firebase-iid-18.0.0/AndroidManifest.xml:34:17-82
+71        </service>
+72
+73        <receiver
+73-->[com.google.firebase:firebase-iid:18.0.0] /Users/codify-dra/.gradle/caches/transforms-2/files-2.1/46cde175a92fa5eed3f77e8920785908/firebase-iid-18.0.0/AndroidManifest.xml:37:9-44:20
+74            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+74-->[com.google.firebase:firebase-iid:18.0.0] /Users/codify-dra/.gradle/caches/transforms-2/files-2.1/46cde175a92fa5eed3f77e8920785908/firebase-iid-18.0.0/AndroidManifest.xml:38:13-78
+75            android:exported="true"
+75-->[com.google.firebase:firebase-iid:18.0.0] /Users/codify-dra/.gradle/caches/transforms-2/files-2.1/46cde175a92fa5eed3f77e8920785908/firebase-iid-18.0.0/AndroidManifest.xml:39:13-36
+76            android:permission="com.google.android.c2dm.permission.SEND" >
+76-->[com.google.firebase:firebase-iid:18.0.0] /Users/codify-dra/.gradle/caches/transforms-2/files-2.1/46cde175a92fa5eed3f77e8920785908/firebase-iid-18.0.0/AndroidManifest.xml:40:13-73
+77            <intent-filter>
+77-->[com.google.firebase:firebase-iid:18.0.0] /Users/codify-dra/.gradle/caches/transforms-2/files-2.1/46cde175a92fa5eed3f77e8920785908/firebase-iid-18.0.0/AndroidManifest.xml:41:13-43:29
+78                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+78-->[com.google.firebase:firebase-iid:18.0.0] /Users/codify-dra/.gradle/caches/transforms-2/files-2.1/46cde175a92fa5eed3f77e8920785908/firebase-iid-18.0.0/AndroidManifest.xml:42:17-81
+78-->[com.google.firebase:firebase-iid:18.0.0] /Users/codify-dra/.gradle/caches/transforms-2/files-2.1/46cde175a92fa5eed3f77e8920785908/firebase-iid-18.0.0/AndroidManifest.xml:42:25-78
+79            </intent-filter>
+80        </receiver>
+81
+82        <provider
+82-->[com.google.firebase:firebase-common:17.0.0] /Users/codify-dra/.gradle/caches/transforms-2/files-2.1/d43c9f79801e8f4eccd515313b040e7c/firebase-common-17.0.0/AndroidManifest.xml:12:9-16:39
+83            android:name="com.google.firebase.provider.FirebaseInitProvider"
+83-->[com.google.firebase:firebase-common:17.0.0] /Users/codify-dra/.gradle/caches/transforms-2/files-2.1/d43c9f79801e8f4eccd515313b040e7c/firebase-common-17.0.0/AndroidManifest.xml:13:13-77
+84            android:authorities="id.codify.sapio.sapiocapacitor.test.firebaseinitprovider"
+84-->[com.google.firebase:firebase-common:17.0.0] /Users/codify-dra/.gradle/caches/transforms-2/files-2.1/d43c9f79801e8f4eccd515313b040e7c/firebase-common-17.0.0/AndroidManifest.xml:14:13-72
+85            android:exported="false"
+85-->[com.google.firebase:firebase-common:17.0.0] /Users/codify-dra/.gradle/caches/transforms-2/files-2.1/d43c9f79801e8f4eccd515313b040e7c/firebase-common-17.0.0/AndroidManifest.xml:15:13-37
+86            android:initOrder="100" />
+86-->[com.google.firebase:firebase-common:17.0.0] /Users/codify-dra/.gradle/caches/transforms-2/files-2.1/d43c9f79801e8f4eccd515313b040e7c/firebase-common-17.0.0/AndroidManifest.xml:16:13-36
+87
+88        <activity
+88-->[com.google.android.gms:play-services-base:16.0.1] /Users/codify-dra/.gradle/caches/transforms-2/files-2.1/a1dd93e89986977cdb4ffd5b44aa1226/play-services-base-16.0.1/AndroidManifest.xml:23:9-26:75
+89            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+89-->[com.google.android.gms:play-services-base:16.0.1] /Users/codify-dra/.gradle/caches/transforms-2/files-2.1/a1dd93e89986977cdb4ffd5b44aa1226/play-services-base-16.0.1/AndroidManifest.xml:24:13-79
+90            android:exported="false"
+90-->[com.google.android.gms:play-services-base:16.0.1] /Users/codify-dra/.gradle/caches/transforms-2/files-2.1/a1dd93e89986977cdb4ffd5b44aa1226/play-services-base-16.0.1/AndroidManifest.xml:25:13-37
+91            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+91-->[com.google.android.gms:play-services-base:16.0.1] /Users/codify-dra/.gradle/caches/transforms-2/files-2.1/a1dd93e89986977cdb4ffd5b44aa1226/play-services-base-16.0.1/AndroidManifest.xml:26:13-72
+92
+93        <meta-data
+93-->[com.google.android.gms:play-services-basement:16.0.1] /Users/codify-dra/.gradle/caches/transforms-2/files-2.1/18c6ca0e9127e45469c1d04a4796b4b0/play-services-basement-16.0.1/AndroidManifest.xml:23:9-25:69
+94            android:name="com.google.android.gms.version"
+94-->[com.google.android.gms:play-services-basement:16.0.1] /Users/codify-dra/.gradle/caches/transforms-2/files-2.1/18c6ca0e9127e45469c1d04a4796b4b0/play-services-basement-16.0.1/AndroidManifest.xml:24:13-58
+95            android:value="@integer/google_play_services_version" />
+95-->[com.google.android.gms:play-services-basement:16.0.1] /Users/codify-dra/.gradle/caches/transforms-2/files-2.1/18c6ca0e9127e45469c1d04a4796b4b0/play-services-basement-16.0.1/AndroidManifest.xml:25:13-66
+96        <meta-data
+96-->[com.android.support:support-v4:26.1.0] /Users/codify-dra/.gradle/caches/transforms-2/files-2.1/48457b84eb30d18507ddfcfa7adec65c/support-v4-26.1.0/AndroidManifest.xml:26:9-28:38
+97            android:name="android.support.VERSION"
+97-->[com.android.support:support-v4:26.1.0] /Users/codify-dra/.gradle/caches/transforms-2/files-2.1/48457b84eb30d18507ddfcfa7adec65c/support-v4-26.1.0/AndroidManifest.xml:27:13-51
+98            android:value="26.1.0" />
+98-->[com.android.support:support-v4:26.1.0] /Users/codify-dra/.gradle/caches/transforms-2/files-2.1/48457b84eb30d18507ddfcfa7adec65c/support-v4-26.1.0/AndroidManifest.xml:28:13-35
+99    </application>
+100
+101</manifest>
