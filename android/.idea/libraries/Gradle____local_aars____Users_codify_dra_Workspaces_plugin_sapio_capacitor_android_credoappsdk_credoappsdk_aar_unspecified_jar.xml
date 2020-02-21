@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: __local_aars__:/Users/codify-dra/Workspaces/plugin/sapio-capacitor/android/credoappsdk/credoappsdk.aar:unspecified@jar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/893a5c550a5d35dbdfb7d7d2b4b9f565/credoappsdk/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/893a5c550a5d35dbdfb7d7d2b4b9f565/credoappsdk/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/42f42d2e3cad44abcc8b0d2b7f2f8926/credoappsdk/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/42f42d2e3cad44abcc8b0d2b7f2f8926/credoappsdk/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
