@@ -3,24 +3,24 @@
 3    package="id.codify.sapio.sapiocapacitor.test" >
 4
 5    <uses-sdk
-5-->/Users/codify-dra/Workspaces/plugin/sapio-capacitor/android/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger334111137677161942.xml:5:5-74
+5-->/Users/codify-dra/Workspaces/plugin/sapio-capacitor/android/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger1699958772721971616.xml:5:5-74
 6        android:minSdkVersion="21"
-6-->/Users/codify-dra/Workspaces/plugin/sapio-capacitor/android/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger334111137677161942.xml:5:15-41
+6-->/Users/codify-dra/Workspaces/plugin/sapio-capacitor/android/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger1699958772721971616.xml:5:15-41
 7        android:targetSdkVersion="28" />
-7-->/Users/codify-dra/Workspaces/plugin/sapio-capacitor/android/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger334111137677161942.xml:5:42-71
+7-->/Users/codify-dra/Workspaces/plugin/sapio-capacitor/android/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger1699958772721971616.xml:5:42-71
 8
 9    <instrumentation
-9-->/Users/codify-dra/Workspaces/plugin/sapio-capacitor/android/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger334111137677161942.xml:11:5-15:85
+9-->/Users/codify-dra/Workspaces/plugin/sapio-capacitor/android/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger1699958772721971616.xml:11:5-15:85
 10        android:name="android.support.test.runner.AndroidJUnitRunner"
-10-->/Users/codify-dra/Workspaces/plugin/sapio-capacitor/android/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger334111137677161942.xml:11:22-83
+10-->/Users/codify-dra/Workspaces/plugin/sapio-capacitor/android/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger1699958772721971616.xml:11:22-83
 11        android:functionalTest="false"
-11-->/Users/codify-dra/Workspaces/plugin/sapio-capacitor/android/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger334111137677161942.xml:14:22-52
+11-->/Users/codify-dra/Workspaces/plugin/sapio-capacitor/android/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger1699958772721971616.xml:14:22-52
 12        android:handleProfiling="false"
-12-->/Users/codify-dra/Workspaces/plugin/sapio-capacitor/android/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger334111137677161942.xml:13:22-53
+12-->/Users/codify-dra/Workspaces/plugin/sapio-capacitor/android/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger1699958772721971616.xml:13:22-53
 13        android:label="Tests for id.codify.sapio.sapiocapacitor.test"
-13-->/Users/codify-dra/Workspaces/plugin/sapio-capacitor/android/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger334111137677161942.xml:15:22-83
+13-->/Users/codify-dra/Workspaces/plugin/sapio-capacitor/android/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger1699958772721971616.xml:15:22-83
 14        android:targetPackage="id.codify.sapio.sapiocapacitor.test" />
-14-->/Users/codify-dra/Workspaces/plugin/sapio-capacitor/android/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger334111137677161942.xml:12:22-81
+14-->/Users/codify-dra/Workspaces/plugin/sapio-capacitor/android/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger1699958772721971616.xml:12:22-81
 15
 16    <uses-feature
 16-->[:capacitor-android] /Users/codify-dra/Workspaces/plugin/sapio-capacitor/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-13:36
@@ -42,16 +42,16 @@
 22-->[com.google.firebase:firebase-iid:18.0.0] /Users/codify-dra/.gradle/caches/transforms-2/files-2.1/46cde175a92fa5eed3f77e8920785908/firebase-iid-18.0.0/AndroidManifest.xml:26:22-79
 23
 24    <application
-24-->/Users/codify-dra/Workspaces/plugin/sapio-capacitor/android/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger334111137677161942.xml:7:5-9:19
+24-->/Users/codify-dra/Workspaces/plugin/sapio-capacitor/android/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger1699958772721971616.xml:7:5-9:19
 25        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
 25-->[com.android.support:support-compat:28.0.0] /Users/codify-dra/.gradle/caches/transforms-2/files-2.1/dd1cf78f22bdd94f550130b281f27c97/support-compat-28.0.0/AndroidManifest.xml:22:18-91
 26        android:debuggable="true"
-26-->/Users/codify-dra/Workspaces/plugin/sapio-capacitor/android/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger334111137677161942.xml:7:18-43
+26-->/Users/codify-dra/Workspaces/plugin/sapio-capacitor/android/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger1699958772721971616.xml:7:18-43
 27        android:largeHeap="true" >
-27-->[:credoappsdk] /Users/codify-dra/Workspaces/plugin/sapio-capacitor/android/credoappsdk/build/.transforms/9386de0b115558d6bcfebc737216d0e7/credoappsdk/AndroidManifest.xml:11:18-42
+27-->[credoappsdk.aar] /Users/codify-dra/.gradle/caches/transforms-2/files-2.1/363ac8592a711155503ace6fe29d7646/credoappsdk/AndroidManifest.xml:11:18-42
 28        <uses-library android:name="android.test.runner" />
-28-->/Users/codify-dra/Workspaces/plugin/sapio-capacitor/android/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger334111137677161942.xml:8:9-60
-28-->/Users/codify-dra/Workspaces/plugin/sapio-capacitor/android/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger334111137677161942.xml:8:23-57
+28-->/Users/codify-dra/Workspaces/plugin/sapio-capacitor/android/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger1699958772721971616.xml:8:9-60
+28-->/Users/codify-dra/Workspaces/plugin/sapio-capacitor/android/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger1699958772721971616.xml:8:23-57
 29
 30        <service
 30-->[:capacitor-android] /Users/codify-dra/Workspaces/plugin/sapio-capacitor/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:9-18:40
